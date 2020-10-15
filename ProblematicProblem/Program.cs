@@ -1,7 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Threading;
 
-ProblematicProblem
+namespace ProblematicProblem
 {
-    Program class
+    class Program
     {
         Random rng;        
         static bool cont = true;
@@ -20,7 +23,7 @@ ProblematicProblem
             Console.WriteLine();
 
             Console.Write("What is your age? ");
-            int userAge = Console.ReadLine();
+            int userAge = int.Parse(Console.ReadLine());
 
             Console.WriteLine();
 
@@ -47,15 +50,16 @@ ProblematicProblem
 
                     activities.Add(userAddition);
 
-                    foreach (string activity activities)
+                    for (int i = 0; i < activities.Count; i++)
                     {
+                        string activity = activities[i];
                         Console.Write($"{activity} ");
                         Thread.Sleep(250);
                     }
 
                     Console.WriteLine();
                     Console.WriteLine("Would you like to add more? yes/no: ");
-                    string addToList = bool.Parse(Console.ReadLine());
+                    addToList = bool.Parse(Console.ReadLine());
                 }
             }
             
@@ -69,7 +73,7 @@ ProblematicProblem
                     Thread.Sleep(500);
                 }
 
-                Console.WriteLine()
+                Console.WriteLine();
 
                 Console.Write("Choosing your random activity");
 
@@ -79,11 +83,11 @@ ProblematicProblem
                     Thread.Sleep(500);
                 }
 
-                Console.WriteLine()
+                Console.WriteLine();
 
                 int randomNumber = rng.Next(activities.Count);
 
-                string randomActivity = activities[randomNumber]
+                string randomActivity = activities[randomNumber];
 
                 if (userAge > 21 && randomActivity == "Wine Tasting")
                 {
